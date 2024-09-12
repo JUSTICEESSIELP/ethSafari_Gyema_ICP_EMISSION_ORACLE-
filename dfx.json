@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "carbon_footprint_calculator_backend": {
+      "build": "npx azle carbon_footprint_calculator_backend",
+      "candid": "src/carbon_footprint_calculator_backend/carbon_footprint_calculator_backend.did",
+      "gzip": true,
+      "main": "src/carbon_footprint_calculator_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/carbon_footprint_calculator_backend/carbon_footprint_calculator_backend.wasm"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
