@@ -4,6 +4,11 @@
       "build": "npx azle carbon_footprint_calculator_backend",
       "candid": "src/carbon_footprint_calculator_backend/carbon_footprint_calculator_backend.did",
       "gzip": true,
+      "custom": {
+        "experimental": true,
+        "candid_gen": "http",
+        "env": ["GOOGLE_MAPS_API_KEY", "ELECTRICITY_MAP_API_KEY", "UK_VEHICLE_EMISSIONS_API_KEY"]
+    },
       "main": "src/carbon_footprint_calculator_backend/src/index.ts",
       "tech_stack": {
         "cdk": {
@@ -15,7 +20,12 @@
         }
       },
       "type": "custom",
-      "wasm": ".azle/carbon_footprint_calculator_backend/carbon_footprint_calculator_backend.wasm"
+      "wasm": ".azle/carbon_footprint_calculator_backend/carbon_footprint_calculator_backend.wasm", 
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}",
+        "ELECTRICITY_MAP_API_KEY": "${ELECTRICITY_MAP_API_KEY}",
+        "UK_VEHICLE_EMISSIONS_API_KEY": "${UK_VEHICLE_EMISSIONS_API_KEY}"
+      }
     }
   },
   "defaults": {
